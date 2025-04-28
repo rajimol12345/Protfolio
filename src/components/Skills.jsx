@@ -1,36 +1,49 @@
-import React from "react";
+import React from 'react';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaBootstrap,
+  FaPython,
+  FaPhp,
+  FaGitAlt,
+  FaGithub,
+  FaDatabase,
+} from 'react-icons/fa';
+import { SiDjango, SiSqlite } from 'react-icons/si';
 
-function Skills() {
-  const skillsData = [
-    { name: "HTML", level: "90%" },
-    { name: "CSS", level: "85%" },
-    { name: "JavaScript", level: "80%" },
-    { name: "React.js", level: "85%" },
-    { name: "Python", level: "70%" },
-    { name: "Django", level: "65%" },
-    { name:"PHP",level:"50%"},
-    { name:"SQL",level:"70%"},
-    { name:"MYSQL",level:"80%"},
-    { name: "Git & GitHub", level: "80%" },
-  ];
+const skills = [
+  { icon: <FaHtml5 size={50} color="#e34c26" />, name: 'HTML5' },
+  { icon: <FaCss3Alt size={50} color="#264de4" />, name: 'CSS3' },
+  { icon: <FaJs size={50} color="#f0db4f" />, name: 'JavaScript' },
+  { icon: <FaReact size={50} color="#61dbfb" />, name: 'ReactJS' },
+  { icon: <FaBootstrap size={50} color="#7952B3" />, name: 'Bootstrap' },
+  { icon: <FaPython size={50} color="#4B8BBE" />, name: 'Python' },
+  { icon: <SiDjango size={50} color="#092E20" />, name: 'Django' },
+  { icon: <FaPhp size={50} color="#8892BF" />, name: 'PHP' },
+  { icon: <FaDatabase size={50} color="#f29111" />, name: 'MySQL' },
+  { icon: <SiSqlite size={50} color="#003B57" />, name: 'SQLite' },
+  { icon: <FaGitAlt size={50} color="#F1502F" />, name: 'Git' },
+  { icon: <FaGithub size={50} color="#333" />, name: 'GitHub' },
+];
 
+const SkillsScroll = () => {
   return (
     <div className="bg">
       <div className="skills-container">
-        <h2>My Skills</h2>
-        <div className="skills-list">
-          {skillsData.map((skill, index) => (
-            <div key={index} className="skill-item">
+        <h2 className="skills-title">My Skills</h2>
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div className="skill-card" key={index}>
+              {skill.icon}
               <p>{skill.name}</p>
-              <div className="skill-bar">
-                <div className="skill-fill" style={{ width: skill.level }}></div>
-              </div>
             </div>
           ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Skills;
+export default SkillsScroll;

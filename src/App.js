@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import {Route, Routes} from 'react-router-dom'
@@ -12,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Footer/>
       <Routes>
         <Route path="*" element={<Home/>}/>
         <Route path="/About" element={<About/>}/>
@@ -20,6 +18,7 @@ function App() {
         <Route path="/Projects" element={<Projects/>}/>
         <Route path="/Skills" element={<Skills/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

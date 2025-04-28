@@ -4,11 +4,14 @@
 }
 nav
 {
-  background-color: #1e3a8a;;
+  background-color: #20002c;
   position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .bg{
-  background-image: linear-gradient(to right, #1e3a8a, #10b981);
+  background-image: linear-gradient(to right, #20002c, #cbb4d4);
   background-attachment: fixed;
   background-size: 100%;
   background-position: center;
@@ -22,7 +25,7 @@ nav
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(70, 191, 240);
+  color: #e0d1ec;
   text-align: left;
   padding: 20px;
 }
@@ -37,12 +40,12 @@ nav
 }
 
 .text-section .highlight {
-  color: rgb(46, 46, 131);
+  color:  #ffffff;
 }
 
 .text-section h2 {
   font-size: 1.8rem;
-  color: rgb(12, 219, 12);
+  color: #cbb4d4;;
   margin-bottom: 15px;
 }
 
@@ -52,22 +55,21 @@ nav
 }
 
 .btn {
-    background: linear-gradient(45deg, #FFD700, #FFB800);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #a4508b, #cbb4d4); /* pink-purple gradient */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background: linear-gradient(45deg, #cbb4d4, #a4508b);
 }
 
-.btn:hover {
-   background: linear-gradient(45deg, #FFB800, #FFD700);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-}
 .image-section img {
   margin-left:70px;
   width: 300px;
@@ -79,19 +81,19 @@ nav
 }
 
 .about-text h2 {
-  color:darkblue;
+  color: #cbb4d4;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 .about-text p {
-  color:rgb(14, 218, 14);
+  color: #e0d1ec; 
   font-size: 1.2rem;
   margin-bottom: 15px;
   line-height: 1.5;
 }
 .highlight {
-  color: darkblue;
+  color: #cbb4d4;
   font-weight: bold;
 }
 .about-image img {
@@ -108,13 +110,13 @@ nav
   gap: 50px;
   height:85vh;
   padding: 2 0px;
-  color: white;
+  color: #ffffff;
 }
 /* Education Section Styling */
 .education-container {
   text-align: center;
   padding: 50px;
-  color: darkblue;
+  color: #cbb4d4;
 }
 
 .education-container h2 {
@@ -130,7 +132,7 @@ nav
 }
 
 .education-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   padding: 20px;
   border-radius: 10px;
   width: 60%;
@@ -146,7 +148,7 @@ nav
 .education-card h3 {
   font-size: 1.5rem;
   margin-bottom: 5px;
-  color: #00aaff;
+  color: #f5e9ff;
 }
 
 .university {
@@ -156,14 +158,14 @@ nav
 
 .year {
   font-size: 1rem;
-  color:rgb(13, 238, 13);
+  color: #d2a8ff;;
 }
 /* Projects Section Styling */
 .projects-container {
   text-align: center;
   background-attachment: fixed;
   padding: 50px;
-  color: darkblue;
+  color: #cbb4d4;
   height:85vh;
 }
 
@@ -196,7 +198,7 @@ nav
 .project-card h3 {
   font-size: 1.5rem;
   margin-bottom: 5px;
-  color: #00aaff;
+  color: #e0d1ec;
 }
 
 .project-card p {
@@ -209,7 +211,7 @@ nav
   margin: 5px;
   padding: 8px 15px;
   font-size: 0.9rem;
-  background: #00aaff;
+  background: #7b3c9c;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -217,61 +219,78 @@ nav
 }
 
 .project-links a:hover {
-  background: #0088cc;
+  background: #5e2d73;
 }
 /* Skills Section Styling */
-.skills-container {
-  text-align: center;
-  padding: 50px;
-  color:rgb(13, 13, 87);
-  height:105vh;
-  background-attachment: fixed;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-.skills-container h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.skills-list {
+.page-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  min-height: 100vh;
 }
 
-.skill-item {
-  width: 60%;
-  text-align: left;
-}
-
-.skill-item p {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  position: relative;
-}
-
-.skill-fill {
-  height: 100%;
-  background: #00aaff;
-  border-radius: 5px;
-  transition: width 0.8s ease-in-out;
-}
-/* Footer Section Styling */
-.footer {
-  background-color: #1e3a8a;;
-  color: #fff;
+.skills-container {
+  flex: 1; /* Takes up remaining space between header and footer */
+  padding: 50px 20px;
   text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  color: #fff;
+  perspective: 1000px;
 }
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #cbb4d4;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+}
+
+.skill-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #f1f5f9;
+}
+.footer {
+  background-color: #20002c; /* matching dark purple */
+  color: #cbb4d4; /* soft lavender text */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+  
 
