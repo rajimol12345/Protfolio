@@ -19,9 +19,10 @@ nav
   margin: 0;
   padding: 0;
 }
-/* Home Page Styling */
+/* Home Page  */
+/* ===== Base Styles for Desktop and large screens ===== */
 .home-container {
-  height:85vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,12 +41,12 @@ nav
 }
 
 .text-section .highlight {
-  color:  #ffffff;
+  color: #ffffff;
 }
 
 .text-section h2 {
   font-size: 1.8rem;
-  color: #cbb4d4;;
+  color: #cbb4d4;
   margin-bottom: 15px;
 }
 
@@ -71,13 +72,114 @@ nav
 }
 
 .image-section img {
-  margin-left:70px;
+  margin-left: 70px;
   width: 300px;
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
+
+/* ===== Tablet View (Medium screens ≤ 992px) ===== */
+@media (max-width: 992px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .text-section {
+    max-width: 80%;
+  }
+
+  .text-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-section p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .image-section img {
+    width: 250px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* ===== Mobile View (Small screens ≤ 576px) ===== */
+@media (max-width: 576px) {
+  .home-container {
+    padding: 20px;
+  }
+
+  .text-section {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .text-section h1 {
+    font-size: 2rem;
+  }
+
+  .text-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .image-section img {
+    width: 200px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* about page */
+/* ===== Base Styles (Desktop and large screens) ===== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height:85vh;
+  padding: 0px;
+  color: #ffffff;
+}
+
+.about-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
 .about-text {
   max-width: 500px;
+  font-family: 'Arial', sans-serif;
 }
 
 .about-text h2 {
@@ -92,26 +194,58 @@ nav
   margin-bottom: 15px;
   line-height: 1.5;
 }
+
 .highlight {
-  color: #cbb4d4;
+  color: #f0ebf1;
   font-weight: bold;
 }
-.about-image img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+
+/* ===== Tablet View (Medium screens ≤ 992px) ===== */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-image img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+  }
 }
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  height:85vh;
-  padding: 2 0px;
-  color: #ffffff;
+
+/* ===== Mobile View (Small screens ≤ 576px) ===== */
+@media (max-width: 576px) {
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-text {
+    padding: 0 10px;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-container {
+    gap: 25px;
+  }
 }
+
 /* Education Section Styling */
 .education-container {
   text-align: center;
