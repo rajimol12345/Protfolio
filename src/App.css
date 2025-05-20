@@ -170,7 +170,7 @@ nav
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
   display: block;
-  margin: 0 auto;
+  margin-top:50px
 }
 
 .about-image img:hover {
